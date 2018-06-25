@@ -1,17 +1,18 @@
 import VueRouter from 'vue-router';
-import Examples from './Examples';
-import ExampleContainer from './ExampleContainer';
+import Examples from './demo/Examples';
+import ExampleContainer from './demo/ExampleContainer';
+
 export const routes = [
   {
     path: '/',
-    component: Examples
+    component: Examples,
   },
   {
     path: '/:example',
-    component: ExampleContainer
-  }
+    component: ExampleContainer,
+  },
 ];
 const router = new VueRouter({
-  routes // short for `routes: routes`
+  routes, // short for `routes: routes`
 });
 export default router;
