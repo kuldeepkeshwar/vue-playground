@@ -1,16 +1,19 @@
+/* eslint-disable */
 export async function extractComponentMeta(name, ...rest) {
   try {
-    const module = await import('./components/' + name + '.usage');
+    const module = await import(`./components/${name}/usage`);
     return module.usage(rest);
   } catch (err) {
-    console.log(err);
+    console.log("extractComponentMeta:", err);
   }
+  return null;
 }
 export async function extractComponent(name) {
   try {
-    const module = await import('./components/' + name);
+    const module = await import(`./components/${name}`);
     return module.default || module;
   } catch (err) {
-    console.log(err);
+    console.log("extractComponent:", err);
   }
+  return null;
 }

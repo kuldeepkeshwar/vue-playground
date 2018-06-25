@@ -2,7 +2,7 @@
   <div id="app">
     <ul>
     <li v-bind:key="example.path" v-for="example in examples">
-      <router-link :to="example.path">{{example.title}}</router-link>
+      <router-link class="link" :to="example.path">{{example.title}}</router-link>
     </li>
   </ul>
   </div>
@@ -10,17 +10,17 @@
 
 <script>
 export default {
-  name: 'Examples',
+  name: "Examples",
   data: function() {
     return {
       examples: [
         {
-          title: 'Textbox',
-          path: '/Textbox'
+          title: "Textbox",
+          path: "/Textbox"
         },
         {
-          title: 'Button',
-          path: '/Button'
+          title: "Button",
+          path: "/Button"
         }
       ]
     };
@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
