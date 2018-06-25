@@ -1,26 +1,26 @@
 <template>
-  <div id="app">
-    <ul>
-    <li v-bind:key="example.path" v-for="example in examples">
+  <div>
+    <div class="component-list">
+    <div class="component-list-item" v-bind:key="example.path" v-for="example in examples">
       <router-link class="link" :to="example.path">{{example.title}}</router-link>
-    </li>
-  </ul>
+    </div>
+  </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Examples",
+  name: 'Examples',
   data: function() {
     return {
       examples: [
         {
-          title: "Textbox",
-          path: "/Textbox"
+          title: 'Textbox',
+          path: '/Textbox'
         },
         {
-          title: "Button",
-          path: "/Button"
+          title: 'Button',
+          path: '/Button'
         }
       ]
     };
@@ -29,15 +29,11 @@ export default {
 </script>
 
 <style scoped>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.component-list {
+  /* list-style: none;
+  padding: 0px; */
 }
-ul {
-  list-style: none;
+.component-list-item {
+  margin: 1rem;
 }
 </style>

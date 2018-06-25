@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="root">
     <div class="header">
       <router-link class="link" to="/">Go Back</router-link>
       <h3>{{title}}</h3>
@@ -10,11 +10,11 @@
   </div>
 </template>
 <script>
-import Placeholder from "./Placeholder";
-import { extractComponent, extractComponentMeta } from "./../utils";
+import Placeholder from './Placeholder';
+import { extractComponent, extractComponentMeta } from './../utils';
 
 export default {
-  name: "ExampleContainer",
+  name: 'ExampleContainer',
   components: {
     Placeholder
   },
@@ -51,9 +51,11 @@ export default {
 </script>
 
 <style scoped>
+.root {
+  padding: 0px 4rem;
+}
 .header {
   display: flex;
-  padding: 0px 556px;
   justify-content: space-between;
   align-items: center;
 }
@@ -61,10 +63,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px;
-  position: relative;
-  min-height: 200px;
-  width: 250px;
+  min-height: 400px;
   margin: 30px auto 0;
   border: 2px solid green;
 }
