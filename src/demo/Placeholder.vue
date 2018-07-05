@@ -1,20 +1,29 @@
 <script>
 export default {
-  name: "Placeholder",
-  props: ["component"],
+  name: 'Placeholder',
+  props: ['component'],
   render: function(createElement) {
-    const { definition, meta } = this.component;
-    if (definition) {
-      if (Array.isArray(meta)) {
-        return createElement(
-          "div",
-          meta.map(m => createElement(definition, { ...m.dataObj }, m.children))
-        );
+    const { definition, usage } = this.component;
+    if (usage) {
+      if (usage.createMeta && definition) {
+        const meta = usage.createMeta();
+        if (Array.isArray(meta)) {
+          return createElement(
+            'div',
+            meta.map(m =>
+              createElement(definition, { ...m.dataObj }, m.children)
+            )
+          );
+        } else {
+          return createElement(definition, { ...meta.dataObj }, [
+            meta.children
+          ]);
+        }
       } else {
-        return createElement(definition, { ...meta.dataObj }, [meta.children]);
+        return createElement(usage, []);
       }
     } else {
-      return createElement("div", ["loading example"]);
+      return createElement('div', ['loading example']);
     }
   }
 };
