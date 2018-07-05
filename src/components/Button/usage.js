@@ -1,17 +1,18 @@
-<script>
-export const usage = () => {
+export const createMeta = () => {
   return [
     {
       dataObj: {
-        attrs: {},
+        attrs: {
+          style: 'background: #d9534f;'
+        },
         props: {},
         on: {
           click: function(event) {
-            console.log("clicked");
+            console.log('clicked');
           }
         }
       },
-      children: ["Click Me"]
+      children: ['Click Me']
     },
     {
       dataObj: {
@@ -19,12 +20,11 @@ export const usage = () => {
         props: {},
         on: {
           click: function(event) {
-            console.log("Login");
+            console.log('Login');
           }
         }
       },
-      children: ["Login"]
+      children: ['Login']
     }
   ];
 };
-</script>

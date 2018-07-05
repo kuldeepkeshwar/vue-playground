@@ -10,6 +10,7 @@
 <script>
 export default {
   inheritAttrs: false,
+  name: 'Textbox',
   props: ['label']
 };
 </script>
