@@ -18,13 +18,14 @@
 import Steps from './Steps';
 import Step from './Step';
 import Button from './../Button';
+
 export default {
   components: { Steps, Step, Button },
   data() {
     return {
-      activeStep: 0
+      activeStep: 0,
     };
-  }
+  },
 };
 </script>
 <style scoped>

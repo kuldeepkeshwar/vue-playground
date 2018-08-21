@@ -16,38 +16,37 @@ import { extractComponent, extractComponentMeta } from './../utils';
 export default {
   name: 'ExampleContainer',
   components: {
-    Placeholder
+    Placeholder,
   },
-  data: function() {
+  data() {
     return {
       component: {
         definition: null,
-        usage: null
-      }
+        usage: null,
+      },
     };
   },
   computed: {
-    title: function() {
+    title() {
       return this.$route.params.example ? this.$route.params.example : null;
-    }
+    },
   },
   methods: {
-    extractComponentMeta: function(name) {
+    extractComponentMeta(name) {
       Promise.all([extractComponent(name), extractComponentMeta(name)]).then(
-        results => {
-          debugger;
+        (results) => {
           const [definition, usage] = results;
           this.component = {
             definition,
-            usage
+            usage,
           };
-        }
+        },
       );
-    }
+    },
   },
-  created: function() {
+  created() {
     this.extractComponentMeta(this.$route.params.example);
-  }
+  },
 };
 </script>
 

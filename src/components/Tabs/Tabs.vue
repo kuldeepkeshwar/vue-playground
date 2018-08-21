@@ -1,51 +1,51 @@
 <script>
 function findHeader(vNode) {
   const headers = vNode.componentOptions.children.filter(
-    c => c.data && c.data.slot === 'title'
+    c => c.data && c.data.slot === 'title',
   );
   return headers[0];
 }
 const headerProps = {
   class: {
-    'tab-header-container': true
-  }
+    'tab-header-container': true,
+  },
 };
 export default {
   props: ['active'],
   name: 'Tabs',
-  data: function() {
+  data() {
     return { selected: 0 };
   },
   methods: {
-    clickHandler: function(id, e) {
+    clickHandler(id) {
       this.selected = id;
       this.$emit('change', this.selected);
-    }
+    },
   },
   render(h) {
     const selected = this.active || this.selected || 0;
     const headers = h(
       'div',
       headerProps,
-      this.$slots.default.map((s, i) =>
+      this.$slots.default.filter(s => s.tag).map((s, i) =>
         h(
           'div',
           {
             class: { active: i === selected - 0, tab: true },
             attrs: {
-              id: i
+              id: i,
             },
             on: {
-              click: this.clickHandler.bind(this, i)
-            }
+              click: this.clickHandler.bind(this, i),
+            },
           },
-          [s.componentOptions.propsData.title || findHeader(s)]
-        )
-      )
+          [s.componentOptions.propsData.title || findHeader(s)],
+        ),
+      ),
     );
     const body = h('div', [this.$slots.default[selected]]);
     return h('div', [headers, body]);
-  }
+  },
 };
 </script>
 <style scoped>

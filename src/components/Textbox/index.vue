@@ -8,7 +8,7 @@
 export default {
   inheritAttrs: false,
   name: 'Textbox',
-  props: ['label']
+  props: ['label'],
 };
 </script>
 <style scoped>

@@ -6,7 +6,7 @@
 <script>
 export default {
   inheritAttrs: false,
-  name: 'Button'
+  name: 'Button',
 };
 </script>
 
