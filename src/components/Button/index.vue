@@ -14,6 +14,7 @@ export default {
 .btn {
   font-size: 1.1rem;
   width: 6rem;
+  cursor: pointer;
   height: 2rem;
   border: none;
   outline: none;

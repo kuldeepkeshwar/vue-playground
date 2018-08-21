@@ -1,11 +1,8 @@
 <template>
-<label>
-      {{ label }}
-      <input
-        v-bind="$attrs"
-        v-on="$listeners"
-      />
-    </label>
+  <div>
+    <input v-bind="$attrs" v-on="$listeners" />
+    <label class="label"> {{ label }}</label>
+  </div>
 </template>
 <script>
 export default {
@@ -16,6 +13,9 @@ export default {
 </script>
 <style scoped>
 input {
-  border: 2px solid lightblue;
+  border: solid 1px #e6ebf3;
+  border-radius: 2px;
+  outline: none;
+  min-height: 56px;
 }
 </style>
