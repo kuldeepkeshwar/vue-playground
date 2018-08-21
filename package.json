@@ -10,13 +10,15 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "serve":"cd dist && serve"
   },
   "dependencies": {
     "vue": "^2.5.2",
     "vue-router": "latest"
   },
   "devDependencies": {
+    "serve": "^9.6.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",

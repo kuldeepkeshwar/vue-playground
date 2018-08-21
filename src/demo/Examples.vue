@@ -11,28 +11,28 @@
 <script>
 export default {
   name: 'Examples',
-  data: function() {
+  data() {
     return {
       examples: [
         {
           title: 'Textbox',
-          path: '/Textbox'
+          path: '/Textbox',
         },
         {
           title: 'Button',
-          path: '/Button'
+          path: '/Button',
         },
         {
           title: 'Tabs',
-          path: '/Tabs'
+          path: '/Tabs',
         },
         {
           title: 'Steps',
-          path: '/Steps'
-        }
-      ]
+          path: '/Steps',
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 

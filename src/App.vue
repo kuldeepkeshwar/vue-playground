@@ -1,17 +1,31 @@
 <template>
   <div id="app">
-    <h2>Vue examples</h2>
+    <div class="header">
+      <h2>Vue examples</h2>
+      <img class="logo" alt="Vue logo" src="./assets/logo.png">
+
+    </div>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+
 export default {
-  name: 'App'
+  name: 'App',
 };
 </script>
 
 <style>
+.logo{
+      max-height: 40px;
+    /* display: block; */
+    margin: 1rem 1rem;
+}
+.header{
+  display: flex;
+  justify-content: center;
+}
 .link {
   color: #24aee6;
   text-decoration: none;

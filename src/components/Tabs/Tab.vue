@@ -4,7 +4,7 @@
 <script>
 export default {
   props: ['title'],
-  name: 'Tab'
+  name: 'Tab',
 };
 </script>
 <style scoped>

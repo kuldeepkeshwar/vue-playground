@@ -24,18 +24,19 @@
 import Tabs from './Tabs';
 import Tab from './Tab';
 import Button from './../Button';
+
 export default {
   components: { Tabs, Tab, Button },
   data() {
     return {
-      activeTab: 0
+      activeTab: 0,
     };
   },
   methods: {
     onTabChange(i) {
       this.activeTab = i;
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped>
