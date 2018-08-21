@@ -24,10 +24,11 @@ export default {
   },
   render(h) {
     const selected = this.active || this.selected || 0;
+    const slots = this.$slots.default.filter(s => s.tag);
     const headers = h(
       'div',
       headerProps,
-      this.$slots.default.filter(s => s.tag).map((s, i) =>
+      slots.map((s, i) =>
         h(
           'div',
           {
@@ -43,7 +44,7 @@ export default {
         ),
       ),
     );
-    const body = h('div', [this.$slots.default[selected]]);
+    const body = h('div', [slots[selected]]);
     return h('div', [headers, body]);
   },
 };

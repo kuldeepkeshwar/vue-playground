@@ -2,8 +2,12 @@
 <div>
   <h2>Simple Tabs</h2>
   <Tabs>
-    <Tab title="User">Users List</Tab>
-    <Tab title="Employee">Employee List</Tab>
+    <Tab title="User">
+      Users List
+    </Tab>
+    <Tab title="Employee">
+      Employee List
+    </Tab>
   </Tabs>
   <h2>Tabs with Custom header</h2>
   <div>
@@ -16,7 +20,9 @@
       <div slot="title">User *</div>
       <div>Hello John</div>
     </Tab>
-    <Tab title="Employee">Completing task</Tab>
+    <Tab title="Employee">
+      Completing task
+    </Tab>
   </Tabs>
 </div>
 </template>
